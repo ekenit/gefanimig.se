@@ -1,34 +1,30 @@
-app = "gefanimig-se"
-primary_region = "ams"
+app = 'gefanimig-se'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "./Dockerfile"
 
 [env]
-  NODE_ENV = "production"
-  NITRO_HOST = "0.0.0.0"
-  NITRO_PORT = "3000"
-  PORT = "3000"
+  NODE_ENV = 'production'
 
 [[services]]
+  protocol = 'tcp'
   internal_port = 3000
-  protocol = "tcp"
+  processes = ['app']
 
   [[services.ports]]
     port = 80
-    handlers = ["http"]
+    handlers = ['http']
 
   [[services.ports]]
     port = 443
-    handlers = ["tls", "http"]
-
+    handlers = ['tls', 'http']
+  
   [services.concurrency]
-    type = "connections"
+    type = 'connections'
     hard_limit = 25
     soft_limit = 20
 
   [[services.tcp_checks]]
-    interval = "15s"
-    timeout = "2s"
-    grace_period = "1s"
-    restart_limit = 0
+    interval = '15s'
+    timeout = '2s'
+    grace_period = '1s'
