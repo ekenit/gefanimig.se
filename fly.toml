@@ -1,5 +1,5 @@
 app = 'gefanimig-se'
-primary_region = 'ams'
+primary_region = 'arn'
 
 [build]
 
