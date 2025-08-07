@@ -25,18 +25,19 @@
               <div class="flex-1 space-y-4">
 
                 <h4 class="text-lg font-semibold">
-                  🚨 Ta bort dig från Google sökresultat
+                   🚨 Ta bort dig från Google sökresultat
                 </h4>
 
                 <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                   Även efter att du tagit bort din information från sajterna
-                  ovan kan den fortfarande synas i Googles sökresultat. Via
-                  denna länk kan du gå igenom stegen som krävs för att ta bort
-                  dig från Googles sökresultat, det kan ta upp till flera dagar
-                  att bli godkänt eller ej. Vid nekad ansökan kan du försöka
-                  igen och i vissa fall få det att bli godkänt. Detta är samma
-                  formulär som andra betalsidor använder sig av för att ta bort
-                  sig från Google sökresultat.
+                   Även om du tar bort din information från sajterna ovan kan
+                  den fortfarande visas i Googles sökresultat ett tag. För att
+                  ta bort sådana uppgifter kan du använda Googles egna
+                  borttagningsformulär. Där kan du begära att utdaterad eller
+                  känslig information tas bort från sökresultaten.
+                  Handläggningen kan ta flera dagar, och om ansökan avslås kan
+                  du justera din begäran och försöka igen. Många betalsajter
+                  använder exakt samma formulär, men tar betalt för att skicka
+                  in det åt dig. Du kan alltså göra det helt gratis själv.
                 </p>
                  <Card
                   variant="default"
@@ -44,7 +45,7 @@
                   class="bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800"
                   >
                   <h5 class="font-semibold text-red-800 dark:text-red-200 mb-3">
-                    Använd denna GDPR-mall som skäl:
+                     Använd denna GDPR-mall som skäl:
                   </h5>
 
                   <div
@@ -52,14 +53,14 @@
                   >
 
                     <p class="mb-3">
-                      This page is about me because it includes specific
+                       This page is about me because it includes specific
                       personal details, such as my name and address. The content
                       directly identifies me, and these details are private and
                       sensitive.
                     </p>
 
                     <p>
-                      The continued presence of this information violates my
+                       The continued presence of this information violates my
                       rights under the General Data Protection Regulation
                       (GDPR). Specifically, it infringes on my right to privacy
                       and data protection as outlined in Article 17 (Right to
@@ -109,21 +110,47 @@
                 />
               </div>
 
-              <div class="flex-1 space-y-4">
+              <div class="flex-1 space-y-6">
 
-                <h4 class="text-lg font-semibold">🏠 Skydda din adress</h4>
+                <div>
 
-                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                   <strong>Extremt viktigt!</strong> Dessa officiella tjänster
-                  ger dig extra skydd mot att obehöriga addressändrar åt dig
-                  utan bank-id bekräftelse. Människor kan fortfarande registrera
-                  sig som boende på din adress, men du kommer få ett brev av
-                  skatteverket där du behöver bekräfta att personen bor där.
-                  Brevet kommer du få oavsett om du låser eller ej, men
-                  skilnaden är att utan dessa lås kan vem som helst adressändra
-                  åt dig utan att du får reda på det.
-                </p>
-                 <Card
+                  <h4 class="text-lg font-semibold">🏠 Skydda din adress</h4>
+
+                  <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                     Genom att aktivera de officiella spärrtjänsterna skyddar du
+                    dig mot att någon obehörig ändrar din folkbokföringsadress
+                    utan att du märker det.
+                  </p>
+
+                  <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                     Utan spärr kan vem som helst skicka in en adressändring i
+                    ditt namn utan att det krävs BankID. Med spärr aktiverad
+                    krävs bekräftelse med BankID innan ändringen godkänns.
+                  </p>
+
+                  <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                     Däremot hindrar spärren inte att andra försöker skriva sig
+                    på din adress. I sådana fall skickar Skatteverket ett brev
+                    hem till dig för att du ska bekräfta om personen faktiskt
+                    bor där. Det här brevet får du oavsett om spärren är aktiv
+                    eller inte.
+                  </p>
+
+                  <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                     Många sajter ger intrycket att spärrtjänsterna skyddar din
+                    adress från att andra folkbokför sig där, men det stämmer
+                    inte. Spärrarna skyddar endast *din egen* adress från att
+                    ändras utan ditt godkännande.
+                  </p>
+
+                  <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                     Det positiva är att Skatteverket har förbättrat sina
+                    rutiner. Att du numera alltid får ett brev om någon försöker
+                    skriva sig hos dig är ett viktigt steg i rätt riktning.
+                  </p>
+
+                </div>
+                 <!-- Subsection: Vad gör dessa tjänster? --> <Card
                   variant="default"
                   padding="sm"
                   class="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800"
@@ -131,11 +158,11 @@
                   <h5
                     class="font-semibold text-green-800 dark:text-green-200 mb-3"
                   >
-                    Vad gör dessa tjänster?
+                     Vad gör dessa tjänster?
                   </h5>
 
                   <div
-                    class="space-y-2 text-sm text-green-700 dark:text-green-300"
+                    class="space-y-4 text-sm text-green-700 dark:text-green-300"
                   >
 
                     <div class="flex items-start space-x-3">
@@ -148,10 +175,10 @@
 
                         <p class="font-medium">Adresslåset</p>
 
-                        <p class="text-sm mt-1">
-                          Samma som skatteverkets men kan också spärra
-                          eftersändning, samt att du kan se alla folkbokförda på
-                          din adress
+                        <p class="mt-1">
+                           Erbjuds av Svensk Adressändring. Förhindrar obehörig
+                          eftersändning, låser adressändring utan BankID och
+                          låter dig se vem som är folkbokförd på din adress.
                         </p>
 
                       </div>
@@ -168,8 +195,9 @@
 
                         <p class="font-medium">Skatteverket</p>
 
-                        <p class="text-sm mt-1">
-                          Begränsar vem som kan ändra din adress.
+                        <p class="mt-1">
+                           Kräver BankID för att godkänna ändring av din
+                          folkbokföringsadress.
                         </p>
 
                       </div>
@@ -178,7 +206,7 @@
 
                   </div>
                    </Card
-                > <!-- Legal Disclaimer -->
+                > <!-- Action Buttons -->
                 <div class="flex flex-wrap gap-3">
                    <Button
                     tag="NuxtLink"
@@ -221,7 +249,9 @@
               /> Viktig information
             </h4>
 
-            <div class="space-y-2 sm:space-y-3 text-yellow-700 dark:text-yellow-300">
+            <div
+              class="space-y-2 sm:space-y-3 text-yellow-700 dark:text-yellow-300"
+            >
 
               <div class="flex items-start space-x-3">
 
@@ -234,7 +264,7 @@
                   <p class="font-medium">Ansvarsfriskrivning</p>
 
                   <p class="text-sm mt-1">
-                    Denna guide tillhandahålls i god tro men utan garantier. Vi
+                     Denna guide tillhandahålls i god tro men utan garantier. Vi
                     ansvarar inte för resultatet av dina GDPR-begäran.
                   </p>
 
@@ -253,7 +283,7 @@
                   <p class="font-medium">Juridisk rådgivning</p>
 
                   <p class="text-sm mt-1">
-                    Detta är inte juridisk rådgivning. För komplexa ärenden,
+                     Detta är inte juridisk rådgivning. För komplexa ärenden,
                     kontakta en jurist.
                   </p>
 
@@ -272,7 +302,7 @@
                   <p class="font-medium">Verifiering</p>
 
                   <p class="text-sm mt-1">
-                    Kontaktinformation och processer kan ändras. Vi
+                     Kontaktinformation och processer kan ändras. Vi
                     rekommenderar att du verifierar informationen direkt med
                     respektive tjänst.
                   </p>
@@ -309,3 +339,4 @@ const copyGoogleTemplate = async () => {
   }
 }
 </script>
+

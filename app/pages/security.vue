@@ -17,9 +17,10 @@
              Säkerhetsresurser
           </h1>
 
-          <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-             Gratis verktyg för att kontrollera säkerhet - utan att betala
-            bluffföretag
+          <p
+            class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8"
+          >
+             Andra bra program och verktyg.
           </p>
            <!-- Anti-scam banner -->
           <div
@@ -34,14 +35,14 @@
               <div class="text-left">
 
                 <h3 class="font-semibold text-red-800 dark:text-red-200 mb-2">
-                  Varning för betalbluffar!
+                   Varning för betalbluffar!
                 </h3>
 
                 <p class="text-sm text-red-700 dark:text-red-300">
                    Företag som tar betalt för att "kolla om du är hackad" eller
                   "skydda din identitet" säljer dig tjänster som är gratis. Alla
-                  verktyg nedan kostar ingenting och är ofta bättre än
-                  betaltjänsterna.
+                  verktyg nedan kostar ingenting och är samma många av
+                  betaltjänsterna använder sig av.
                 </p>
 
               </div>
@@ -342,7 +343,7 @@
               </div>
 
               <h3 class="text-lg font-semibold mb-4">
-                Bitwarden Authenticator
+                 Bitwarden Authenticator
               </h3>
 
               <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
@@ -473,7 +474,7 @@
                       <p
                         class="font-semibold mb-3 text-green-800 dark:text-green-200"
                       >
-                        ✅ VPN är bra för:
+                         ✅ VPN är bra för:
                       </p>
 
                       <ul
@@ -497,7 +498,7 @@
                       <p
                         class="font-semibold mb-3 text-red-800 dark:text-red-200"
                       >
-                        ❌ VPN hjälper INTE med:
+                         ❌ VPN hjälper INTE med:
                       </p>
 
                       <ul
@@ -517,15 +518,6 @@
                     </div>
 
                   </div>
-
-                  <p
-                    class="text-base font-medium bg-yellow-100 dark:bg-yellow-900/40 rounded-lg p-3"
-                  >
-                     💡 <strong>Viktigt:</strong> Detta är ingen betald
-                    annonsering. Jag rekommenderar gratis eller billiga
-                    alternativ för att du inte ska bli lurad av dyra
-                    "säkerhets-VPN:er" som kostar 100+ kr/månad.
-                  </p>
 
                 </div>
 
@@ -547,7 +539,9 @@
                 />
               </div>
 
-              <h3 class="text-lg font-semibold mb-4">Mullvad VPN</h3>
+              <h3 class="text-lg font-semibold mb-4">
+                 Mullvad VPN (Ej Gratis)
+              </h3>
 
               <p
                 class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed text-sm"
@@ -949,7 +943,7 @@
               <h3
                 class="text-lg font-semibold mb-4 text-yellow-800 dark:text-yellow-200"
               >
-                Undvik Cloudflare
+                 Undvik Cloudflare
               </h3>
 
               <p
@@ -986,7 +980,7 @@
               </div>
 
               <h3 class="text-lg font-semibold mb-4">
-                Integritetsskyddsmyndigheten (IMY)
+                 Integritetsskyddsmyndigheten (IMY)
               </h3>
 
               <p class="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
@@ -1071,7 +1065,7 @@
             <div class="bg-red-100 dark:bg-red-900/30 rounded-lg p-4 text-left">
 
               <h4 class="font-semibold text-red-800 dark:text-red-200 mb-2">
-                Vanliga blufftjänster att undvika:
+                 Vanliga blufftjänster att undvika:
               </h4>
 
               <ul class="text-sm text-red-700 dark:text-red-300 space-y-1">
@@ -1081,16 +1075,16 @@
                 <li>• "Kreditbevakning" som kostar pengar (gratis på UC.se)</li>
 
                 <li>
-                  • "Dark web monitoring" (Have I Been Pwned gör detta gratis)
+                   • "Dark web monitoring" (Have I Been Pwned gör detta gratis)
                 </li>
 
                 <li>
-                  • "VPN-säkerhet" för 100+ kr/månad (ProtonVPN och WARP är
+                   • "VPN-säkerhet" för 100+ kr/månad (ProtonVPN och WARP är
                   gratis)
                 </li>
 
                 <li>
-                  • "Personuppgiftsrensning" för hundratals kronor (du kan göra
+                   • "Personuppgiftsrensning" för hundratals kronor (du kan göra
                   det själv gratis)
                 </li>
 
@@ -1264,3 +1258,4 @@ definePageMeta({
   },
 })
 </script>
+
