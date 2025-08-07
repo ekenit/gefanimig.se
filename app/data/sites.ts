@@ -9,49 +9,48 @@ export const sites: Site[] = [
     name: 'Ratsit.se',
     method: 'Via Mobilt BankID - Enklaste metoden',
     link: 'https://www.ratsit.se/tabort',
-    linkText: 'Gå till borttagningsformulär'
+    linkText: 'Gå till borttagningsformulär',
   },
   {
-    name: 'Merinfo.se',  
+    name: 'Merinfo.se',
     method: 'Via e-post - Skicka GDPR-mall nedan',
     link: 'https://www.merinfo.se/om',
     linkText: 'Besök webbplats',
-    email: 'info@merinfo.se'
+    email: 'info@merinfo.se',
   },
   {
     name: 'Hitta.se',
     method: 'Via Mobilt BankID - Direktborttagning',
     link: 'https://www.hitta.se/kontakta-oss/ta-bort-kontaktsida',
-    linkText: 'Gå till borttagningsformulär'
+    linkText: 'Gå till borttagningsformulär',
   },
   {
     name: 'Eniro.se',
     method: 'Via Mobilt BankID - Automatisk process',
     link: 'https://uppdatera.eniro.se/person',
-    linkText: 'Gå till borttagningsformulär'
+    linkText: 'Gå till borttagningsformulär',
   },
   {
     name: 'Mrkoll.se',
     method: 'Via webbformulär - Använd GDPR-mallen nedan',
     link: 'https://mrkoll.se/om/kundservice-kundkontakt/',
     linkText: 'Gå till kontaktsida',
-    email: 'info@mrkoll.se'
+    email: 'info@mrkoll.se',
   },
   {
     name: 'Upplysning.se',
     method: 'Via webbformulär - Kontakta kundservice',
     link: 'https://www.upplysning.se/kontakta-oss',
     linkText: 'Gå till kontaktsida',
-    email: 'info@upplysning.se'
+    email: 'info@upplysning.se',
   },
   {
     name: 'Birthday.se',
     method: 'Via Mobilt BankID (rekommenderas) eller e-post',
     link: 'https://app.minauppgifter.se/birthday/bankidlogin',
     linkText: 'Gå till BankID-inloggning',
-    email: 'info@birthday.se'
+    email: 'info@birthday.se',
   },
-
 ]
 
 /**

@@ -2,17 +2,18 @@ Nuxt 4 Base Template for Fly.io – The Ultimate Setup
 
 A sleek, powerful foundation for any modern web project, ready for SaaS, dashboards, landing pages, and more.
 ✅ Stack Summary
-Layer	Tech
-Frontend	Nuxt 4 + Tailwind CSS
-Backend API	Nuxt Server API (/server/api)
-Database	PostgreSQL on Fly.io
-ORM	Prisma
-State Mgmt	Pinia
-Deployment	Fly.io with custom Dockerfile
-Styling	Tailwind + optional UI libs
-SEO & Meta	useHead(), definePageMeta()
-Extras	Prerendering, Page transitions
+Layer Tech
+Frontend Nuxt 4 + Tailwind CSS
+Backend API Nuxt Server API (/server/api)
+Database PostgreSQL on Fly.io
+ORM Prisma
+State Mgmt Pinia
+Deployment Fly.io with custom Dockerfile
+Styling Tailwind + optional UI libs
+SEO & Meta useHead(), definePageMeta()
+Extras Prerendering, Page transitions
 🛠 Full Setup Checklist
+
 1. Initialize Nuxt 4 App
 
 npx nuxi@latest init my-app
@@ -22,10 +23,12 @@ npm install
 2. Install Core Dependencies
 
 # Tailwind CSS
+
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 
 # Prisma + Nuxt integration
+
 npm install prisma @prisma/client @prisma/nuxt
 npx prisma init
 
@@ -34,9 +37,9 @@ npx prisma init
 nuxt.config.ts:
 
 export default defineNuxtConfig({
-  css: ['@/assets/tailwind.css'],
-  build: { transpile: ['@prisma/client'] },
-  modules: ['@prisma/nuxt'],
+css: ['@/assets/tailwind.css'],
+build: { transpile: ['@prisma/client'] },
+modules: ['@prisma/nuxt'],
 })
 
 assets/tailwind.css:
@@ -48,16 +51,16 @@ assets/tailwind.css:
 tailwind.config.js:
 
 module.exports = {
-  content: [
-    './app.vue',
-    './components/**/*.{vue,js}',
-    './layouts/**/*.{vue,js}',
-    './pages/**/*.{vue,js}',
-    './plugins/**/*.{js,ts}',
-    './nuxt.config.{js,ts}',
-  ],
-  theme: { extend: {} },
-  plugins: [],
+content: [
+'./app.vue',
+'./components/**/*.{vue,js}',
+'./layouts/**/*.{vue,js}',
+'./pages/**/*.{vue,js}',
+'./plugins/**/*.{js,ts}',
+'./nuxt.config.{js,ts}',
+],
+theme: { extend: {} },
+plugins: [],
 }
 
 4. Set Up Prisma for Fly.io
@@ -65,12 +68,12 @@ module.exports = {
 Edit prisma/schema.prisma:
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+provider = "postgresql"
+url = env("DATABASE_URL")
 }
 
 generator client {
-  provider = "prisma-client-js"
+provider = "prisma-client-js"
 }
 
 Then create and migrate your schema:
@@ -85,7 +88,7 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 export default defineEventHandler(async () => {
-  return await prisma.user.findMany()
+return await prisma.user.findMany()
 })
 
 6. Configure Environment Variables
@@ -94,8 +97,7 @@ export default defineEventHandler(async () => {
 
 DATABASE_URL="postgresql://your-fly-postgres-url"
 
-Fly.io injects this when you attach the DB.
-7. Create Fly.io PostgreSQL Instance
+Fly.io injects this when you attach the DB. 7. Create Fly.io PostgreSQL Instance
 
 flyctl postgres create --name your-db-name
 flyctl postgres attach --app your-app-name your-db-name
@@ -107,7 +109,7 @@ Dockerfile:
 FROM node:20-alpine
 WORKDIR /app
 
-COPY package*.json ./
+COPY package\*.json ./
 RUN npm install
 
 COPY . .
@@ -123,18 +125,18 @@ app = "your-app-name"
 primary_region = "ams"
 
 [build]
-  dockerfile = "./Dockerfile"
+dockerfile = "./Dockerfile"
 
 [env]
-  NODE_ENV = "production"
+NODE_ENV = "production"
 
 [[services]]
-  internal_port = 3000
-  protocol = "tcp"
+internal_port = 3000
+protocol = "tcp"
 
-  [[services.ports]]
-    port = 80
-    handlers = ["http"]
+[[services.ports]]
+port = 80
+handlers = ["http"]
 
 10. Deploy to Fly.io
 
@@ -149,9 +151,9 @@ npm install -D @tailwindcss/forms @tailwindcss/typography @tailwindcss/aspect-ra
 Add to tailwind.config.js:
 
 plugins: [
-  require('@tailwindcss/forms'),
-  require('@tailwindcss/typography'),
-  require('@tailwindcss/aspect-ratio'),
+require('@tailwindcss/forms'),
+require('@tailwindcss/typography'),
+require('@tailwindcss/aspect-ratio'),
 ]
 
 Optional UI Libraries
@@ -182,9 +184,9 @@ modules: ['@pinia/nuxt']
 Example store: stores/user.ts
 
 export const useUserStore = defineStore('user', () => {
-  const user = ref(null)
-  const setUser = (u: any) => user.value = u
-  return { user, setUser }
+const user = ref(null)
+const setUser = (u: any) => user.value = u
+return { user, setUser }
 })
 
 🔍 SEO & Meta Setup
@@ -200,16 +202,16 @@ modules: ['@nuxtjs/seo']
 In pages:
 
 definePageMeta({
-  title: 'Home - MyApp',
-  description: 'Welcome to the modern Nuxt base',
+title: 'Home - MyApp',
+description: 'Welcome to the modern Nuxt base',
 })
 
 useHead({
-  title: 'Home - MyApp',
-  meta: [
-    { name: 'description', content: 'Modern Nuxt base on Fly.io' },
-    { property: 'og:title', content: 'Home - MyApp' },
-  ]
+title: 'Home - MyApp',
+meta: [
+{ name: 'description', content: 'Modern Nuxt base on Fly.io' },
+{ property: 'og:title', content: 'Home - MyApp' },
+]
 })
 
 🎞️ Page Transitions
@@ -232,30 +234,30 @@ In app.vue:
 </style>
 
 ⚙️ Extra Features
-Feature	Recommended Tool
-Layouts	layouts/default.vue
-Auto imports	Built-in
-Auth	Nuxt Auth / Lucia / Supabase
-Testing	@nuxt/test-utils, vitest
-Linting	eslint, prettier
-Caching	useFetch, nitro.cache()
-Static files	Place in public/
+Feature Recommended Tool
+Layouts layouts/default.vue
+Auto imports Built-in
+Auth Nuxt Auth / Lucia / Supabase
+Testing @nuxt/test-utils, vitest
+Linting eslint, prettier
+Caching useFetch, nitro.cache()
+Static files Place in public/
 🧱 Folder Structure
 
 my-app/
-├─ assets/           # Tailwind CSS, fonts
-├─ components/       # Auto-imported UI components
-├─ layouts/          # App layouts
-├─ pages/            # Route views
-├─ public/           # Static assets
-├─ server/           # API routes, Prisma utils
-│  └─ api/
-│  └─ utils/postgres.ts
-├─ prisma/           # Prisma schema + migrations
-├─ stores/           # Pinia stores
-├─ .env              # Secrets
-├─ nuxt.config.ts    # App config
-└─ Dockerfile        # Fly.io deployment
+├─ assets/ # Tailwind CSS, fonts
+├─ components/ # Auto-imported UI components
+├─ layouts/ # App layouts
+├─ pages/ # Route views
+├─ public/ # Static assets
+├─ server/ # API routes, Prisma utils
+│ └─ api/
+│ └─ utils/postgres.ts
+├─ prisma/ # Prisma schema + migrations
+├─ stores/ # Pinia stores
+├─ .env # Secrets
+├─ nuxt.config.ts # App config
+└─ Dockerfile # Fly.io deployment
 
 ⚡ Prerendering (SSG) with Nuxt 4
 
@@ -264,18 +266,18 @@ Perfect for landing pages, docs, etc.
 nuxt.config.ts:
 
 export default defineNuxtConfig({
-  nitro: {
-    prerender: {
-      routes: ['/', '/about', '/contact'],
-    },
-  },
+nitro: {
+prerender: {
+routes: ['/', '/about', '/contact'],
+},
+},
 })
 
 Dynamic Routes Example (/blog/[slug]):
 
 routes: async () => {
-  const slugs = await fetchSomehow()
-  return slugs.map(slug => `/blog/${slug}`)
+const slugs = await fetchSomehow()
+return slugs.map(slug => `/blog/${slug}`)
 }
 
 Per-page prerendering:

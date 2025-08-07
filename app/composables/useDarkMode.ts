@@ -16,7 +16,9 @@ export const useDarkMode = () => {
       if (stored) {
         isDarkMode.value = stored === 'dark'
       } else {
-        isDarkMode.value = window.matchMedia('(prefers-color-scheme: dark)').matches
+        isDarkMode.value = window.matchMedia(
+          '(prefers-color-scheme: dark)'
+        ).matches
       }
       applyTheme()
     }
@@ -66,6 +68,6 @@ export const useDarkMode = () => {
     currentTheme,
     toggleDarkMode,
     setDarkMode,
-    initializeDarkMode
+    initializeDarkMode,
   }
-} 
+}

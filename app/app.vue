@@ -1,33 +1,27 @@
 <template>
-  <div class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 selection:bg-blue-200 dark:selection:bg-blue-800 font-sans antialiased">
-    <NuxtRouteAnnouncer />
-    
-    <!-- Header -->
-    <Header />
 
-    <!-- Page Content -->
-    <NuxtPage :transition="{
-      name: 'page',
-      mode: 'out-in'
-    }" />
-
-    <!-- Footer with Dark Mode Toggle -->
-    <Footer>
-      <template #dark-mode-toggle>
-        <Button
+  <div
+    class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 selection:bg-blue-200 dark:selection:bg-blue-800 font-sans antialiased"
+  >
+     <NuxtRouteAnnouncer /> <!-- Header --> <Header /> <!-- Page Content -->
+    <NuxtPage
+      :transition="{
+        name: 'page',
+        mode: 'out-in',
+      }"
+    /> <!-- Footer with Dark Mode Toggle --> <Footer
+      > <template #dark-mode-toggle
+        > <Button
           variant="ghost"
           size="sm"
           :icon="isDarkMode ? 'heroicons:sun' : 'heroicons:moon'"
           @click="toggleDarkMode"
-        >
-          {{ isDarkMode ? 'Ljust läge' : 'Mörkt läge' }}
-        </Button>
-      </template>
-    </Footer>
-
-    <!-- Toast Notifications -->
-    <Toast />
+          > {{ isDarkMode ? 'Ljust läge' : 'Mörkt läge' }} </Button
+        > </template
+      > </Footer
+    > <!-- Toast Notifications --> <Toast />
   </div>
+
 </template>
 
 <script setup lang="ts">
@@ -51,7 +45,7 @@ onErrorCaptured((error, instance, info) => {
 onMounted(() => {
   if (import.meta.client) {
     // Monitor Core Web Vitals
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'largest-contentful-paint') {
           console.log('LCP:', entry.startTime)
@@ -62,8 +56,10 @@ onMounted(() => {
         }
       }
     })
-    
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+
+    observer.observe({
+      entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'],
+    })
   }
 })
 </script>

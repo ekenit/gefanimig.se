@@ -1,90 +1,132 @@
 <template>
+
   <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12">
+
     <div class="mx-auto max-w-4xl px-4">
+
       <div class="text-center">
-        <!-- Logo -->
+         <!-- Logo -->
         <div class="flex items-center justify-center space-x-3 mb-4">
-          <div class="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center">
-            <Icon name="heroicons:shield-check" class="h-5 w-5 text-white" />
+
+          <div
+            class="h-8 w-8 rounded-lg bg-blue-600 flex items-center justify-center"
+          >
+             <Icon name="heroicons:shield-check" class="h-5 w-5 text-white" />
           </div>
-          <span class="text-xl font-bold">Ge Fan i Mig</span>
+           <span class="text-xl font-bold">Ge Fan i Mig</span>
         </div>
-        
-        <!-- Tagline -->
+         <!-- Tagline -->
         <p class="text-gray-400 mb-6">
-          En privatperson som blev less på spam och bluffföretag
+           En privatperson som blev less på spam och bluffföretag
         </p>
-        
-        <!-- Quick Facts -->
-        <div class="bg-gray-800/50 rounded-xl p-4 mb-6 text-left max-w-2xl mx-auto">
+         <!-- Quick Facts -->
+        <div
+          class="bg-gray-800/50 rounded-xl p-4 mb-6 text-left max-w-2xl mx-auto"
+        >
+
           <div class="grid sm:grid-cols-2 gap-3 text-sm">
+
             <div class="flex items-center space-x-2">
-              <div class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-              <span class="text-gray-300">100% gratis, inget företag</span>
+
+              <div
+                class="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"
+              ></div>
+               <span class="text-gray-300">100% gratis, inget företag</span>
             </div>
+
             <div class="flex items-center space-x-2">
+
               <div class="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
-              <span class="text-gray-300">~50-100 kr/månad att driva</span>
+               <span class="text-gray-300">~50-100 kr/månad att driva</span>
             </div>
+
             <div class="flex items-center space-x-2">
-              <div class="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"></div>
-              <span class="text-gray-300">Öppen källkod, ingen bullshit</span>
+
+              <div
+                class="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"
+              ></div>
+               <span class="text-gray-300">Öppen källkod, ingen bullshit</span>
             </div>
+
             <div class="flex items-center space-x-2">
-              <div class="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"></div>
-              <span class="text-gray-300">Samma info som betalföretagen</span>
+
+              <div
+                class="w-2 h-2 bg-orange-500 rounded-full flex-shrink-0"
+              ></div>
+               <span class="text-gray-300">Samma info som betalföretagen</span>
             </div>
+
           </div>
+
         </div>
-        
-        <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-          <Button
+         <!-- Action Buttons -->
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
+        >
+           <Button
             tag="NuxtLink"
             to="https://buymeacoffee.com/ekenit"
             variant="warning"
             external
             icon="heroicons:heart"
-          >
-            Köp en kaffe ☕
-          </Button>
-          
-          <slot name="dark-mode-toggle" />
+            > Köp en kaffe ☕ </Button
+          > <slot name="dark-mode-toggle" />
         </div>
-        
-        <!-- Share Link -->
+         <!-- Share Link -->
         <div class="border-t border-gray-700 pt-4 mb-6">
+
           <div class="text-center">
+
             <p class="text-xs text-gray-500 mb-3">
-              Om denna sida hjälpte dig, dela den gärna med andra som också behöver ta bort sina uppgifter
+               Om denna sida hjälpte dig, dela den gärna med andra som också
+              behöver ta bort sina uppgifter
             </p>
-            <Button
+             <Button
               variant="ghost"
               size="sm"
               @click="copyLink"
               class="text-gray-400 hover:text-gray-300 text-xs"
+              > Kopiera länk </Button
             >
-              Kopiera länk
-            </Button>
           </div>
+
         </div>
-        
-        <!-- Legal Information -->
+         <!-- Legal Information -->
         <div class="border-t border-gray-700 pt-6 mt-6">
+
           <div class="text-center space-y-3">
+
             <p class="text-xs text-gray-500">
-              © 2025 Ge Fan i Mig - Bara en person med en dator som hjälper andra svenskar
+               © 2025 Ge Fan i Mig - Bara en person med en dator som hjälper
+              andra svenskar
             </p>
+
             <div class="text-xs text-gray-500 space-y-1">
-              <p><strong>Använd på egen risk:</strong> Detta är inte juridisk rådgivning och jag ger inga garantier</p>
-              <p>Betala aldrig för detta - all info som betalföretagen har finns här gratis</p>
+
+              <p>
+                <strong>Använd på egen risk:</strong> Detta är inte juridisk
+                rådgivning och jag ger inga garantier
+              </p>
+
+              <p>
+                Betala aldrig för detta - all info som betalföretagen har finns
+                här gratis
+              </p>
+
               <p>Inspirerat av en användbar Reddit-post</p>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </footer>
+
 </template>
 
 <script setup lang="ts">
@@ -98,4 +140,5 @@ const copyLink = async () => {
     console.error('Failed to copy link:', err)
   }
 }
-</script> 
+</script>
+

@@ -1,18 +1,18 @@
 <template>
+
   <div class="flex items-center space-x-3">
-    <span class="text-sm text-gray-600 dark:text-gray-400">Dela denna sida:</span>
-    
-    <!-- Copy Link -->
-    <Button
+     <span class="text-sm text-gray-600 dark:text-gray-400"
+      >Dela denna sida:</span
+    > <!-- Copy Link --> <Button
       variant="ghost"
       size="sm"
       @click="copyLink"
       class="text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
       aria-label="Kopiera länk"
+      > <Icon name="heroicons:clipboard" class="h-4 w-4" /> </Button
     >
-      <Icon name="heroicons:clipboard" class="h-4 w-4" />
-    </Button>
   </div>
+
 </template>
 
 <script setup lang="ts">
@@ -22,7 +22,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  url: () => window?.location?.href || 'https://gefanimig.se'
+  url: () => window?.location?.href || 'https://gefanimig.se',
 })
 
 const copyLink = async () => {
@@ -33,4 +33,5 @@ const copyLink = async () => {
     console.error('Failed to copy link:', err)
   }
 }
-</script> 
+</script>
+

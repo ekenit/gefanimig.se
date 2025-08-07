@@ -29,7 +29,7 @@ Jag förväntar mig bekräftelse på att mina uppgifter har raderats inom 30 dag
 
 Med vänliga hälsningar,
 Förnamn Efternamn
-Personnummer`
+Personnummer`,
 }
 
 /**
@@ -53,9 +53,12 @@ export const getGoogleTemplate = (): string => googleRemovalTemplate
 /**
  * Create a customized email template for a specific site
  */
-export const createCustomTemplate = (siteName: string, customMessage?: string): EmailTemplate => {
+export const createCustomTemplate = (
+  siteName: string,
+  customMessage?: string
+): EmailTemplate => {
   return {
     subject: `Begäran om radering av personuppgifter från ${siteName} enligt GDPR`,
-    body: customMessage || gdprTemplate.body
+    body: customMessage || gdprTemplate.body,
   }
-} 
+}

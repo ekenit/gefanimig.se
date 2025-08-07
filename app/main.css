@@ -9,9 +9,17 @@
     scroll-behavior: smooth;
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
-  
+
   body {
-    font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif;
+    font-family:
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      'Roboto',
+      'Ubuntu',
+      'Cantarell',
+      'Noto Sans',
+      sans-serif;
   }
 }
 
@@ -93,4 +101,4 @@
 
 ::-webkit-scrollbar-thumb {
   @apply bg-gray-300 dark:bg-gray-600 rounded-full hover:bg-gray-400 dark:hover:bg-gray-500 transition-colors duration-200;
-} 
+}

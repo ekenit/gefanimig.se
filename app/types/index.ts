@@ -46,4 +46,4 @@ export interface SEOMeta {
   ogDescription?: string
   twitterTitle?: string
   twitterDescription?: string
-} 
+}

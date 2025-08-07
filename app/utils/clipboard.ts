@@ -45,17 +45,20 @@ const fallbackCopyToClipboard = async (text: string): Promise<boolean> => {
  */
 export const copyEmailAddress = async (email: string): Promise<string> => {
   const success = await copyToClipboard(email)
-  return success 
-    ? `${email} kopierad till urklipp!` 
+  return success
+    ? `${email} kopierad till urklipp!`
     : 'Kunde inte kopiera e-postadressen. Kopiera manuellt istället.'
 }
 
 /**
  * Copy template to clipboard
  */
-export const copyTemplate = async (template: string, templateName: string = 'mall'): Promise<string> => {
+export const copyTemplate = async (
+  template: string,
+  templateName: string = 'mall'
+): Promise<string> => {
   const success = await copyToClipboard(template)
-  return success 
-    ? `${templateName} kopierats till urklipp!` 
+  return success
+    ? `${templateName} kopierats till urklipp!`
     : 'Kunde inte kopiera mallen. Kopiera manuellt istället.'
-} 
+}

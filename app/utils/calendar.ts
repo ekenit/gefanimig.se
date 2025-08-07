@@ -11,12 +11,16 @@ const formatICalDate = (date: Date): string => {
  */
 export const generateCalendarReminder = (): string => {
   const now = new Date()
-  const nextYear = new Date(now.getFullYear() + 1, now.getMonth(), now.getDate())
-  
+  const nextYear = new Date(
+    now.getFullYear() + 1,
+    now.getMonth(),
+    now.getDate()
+  )
+
   const startDate = formatICalDate(nextYear)
   const endDate = formatICalDate(new Date(nextYear.getTime() + 60 * 60 * 1000)) // 1 hour later
   const createdDate = formatICalDate(now)
-  
+
   return `BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Ge Fan i Mig//Personuppgifter Rensning//SE
@@ -43,14 +47,22 @@ END:VCALENDAR`
 export const downloadCalendarReminder = (): void => {
   if (import.meta.client) {
     const calendarContent = generateCalendarReminder()
-    downloadTextFile(calendarContent, 'personuppgifter-rensning-påminnelse.ics', 'text/calendar;charset=utf-8')
+    downloadTextFile(
+      calendarContent,
+      'personuppgifter-rensning-påminnelse.ics',
+      'text/calendar;charset=utf-8'
+    )
   }
 }
 
 /**
  * Download text file
  */
-export const downloadTextFile = (content: string, filename: string, mimeType: string = 'text/plain'): void => {
+export const downloadTextFile = (
+  content: string,
+  filename: string,
+  mimeType: string = 'text/plain'
+): void => {
   if (import.meta.client) {
     const blob = new Blob([content], { type: mimeType })
     const url = URL.createObjectURL(blob)
@@ -62,4 +74,4 @@ export const downloadTextFile = (content: string, filename: string, mimeType: st
     document.body.removeChild(link)
     URL.revokeObjectURL(url)
   }
-} 
+}
