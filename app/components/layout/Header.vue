@@ -24,36 +24,94 @@
           </h1>
            </NuxtLink
         > <!-- Navigation -->
-        <div class="flex items-center space-x-3">
-           <!-- Dark Mode Toggle --> <Button
+        <div class="flex items-center space-x-2">
+           <!-- Mobile Menu Button -->
+          <Button
+            variant="ghost"
+            size="sm"
+            @click="toggleMobileMenu"
+            :icon="showMobileMenu ? 'heroicons:x-mark' : 'heroicons:bars-3'"
+            class="md:hidden"
+          />
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-3">
+            <Button
+              variant="ghost"
+              size="sm"
+              :icon="isDarkMode ? 'heroicons:sun' : 'heroicons:moon'"
+              @click="toggleDarkMode"
+              :title="isDarkMode ? 'Växla till ljust läge' : 'Växla till mörkt läge'"
+            />
+            
+            <div class="flex items-center space-x-2">
+              <NuxtLink
+                to="/security"
+                class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-xl border border-transparent transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 transform hover:scale-[1.02] active:scale-[0.98] bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900/50 shadow-sm hover:shadow-md focus:ring-red-500 dark:focus:ring-red-400"
+              >
+                <Icon name="heroicons:shield-check" class="h-4 w-4 mr-2" />
+                Andra Säkerhetsresurser
+              </NuxtLink>
+              
+              <NuxtLink
+                to="/about"
+                class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-xl border border-transparent transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 transform hover:scale-[1.02] active:scale-[0.98] bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 shadow-sm hover:shadow-md focus:ring-gray-500 dark:focus:ring-gray-400"
+              >
+                <Icon name="heroicons:information-circle" class="h-4 w-4 mr-2" />
+                Om Sidan
+              </NuxtLink>
+            </div>
+          </div>
+
+          <!-- Mobile Dark Mode Toggle -->
+          <Button
             variant="ghost"
             size="sm"
             :icon="isDarkMode ? 'heroicons:sun' : 'heroicons:moon'"
             @click="toggleDarkMode"
-            :title="
-              isDarkMode ? 'Växla till ljust läge' : 'Växla till mörkt läge'
-            "
-          /> <!-- Navigation Links -->
-          <div class="flex items-center space-x-2">
-             <NuxtLink
-              to="/security"
-              class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-xl border border-transparent transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 transform hover:scale-[1.02] active:scale-[0.98] bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900/50 shadow-sm hover:shadow-md focus:ring-red-500 dark:focus:ring-red-400"
-              > <Icon name="heroicons:shield-check" class="h-4 w-4 mr-2" />
-              Andra Säkerhetsresurser </NuxtLink
-            > <NuxtLink
-              to="/about"
-              class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium rounded-xl border border-transparent transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 transform hover:scale-[1.02] active:scale-[0.98] bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 shadow-sm hover:shadow-md focus:ring-gray-500 dark:focus:ring-gray-400"
-              > <Icon
-                name="heroicons:information-circle"
-                class="h-4 w-4 mr-2"
-              /> Om Sidan </NuxtLink
-            >
-          </div>
-
+            :title="isDarkMode ? 'Växla till ljust läge' : 'Växla till mörkt läge'"
+            class="md:hidden"
+          />
         </div>
 
       </div>
 
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      v-if="showMobileMenu"
+      class="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-b border-gray-200/50 dark:border-gray-800/50"
+    >
+      <div class="py-4 px-4 space-y-3">
+        <NuxtLink
+          to="/security"
+          @click="closeMobileMenu"
+          class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium rounded-xl bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 hover:bg-red-200 dark:hover:bg-red-900/50 transition-colors"
+        >
+          <Icon name="heroicons:shield-check" class="h-4 w-4 mr-2" />
+          Andra Säkerhetsresurser
+        </NuxtLink>
+        
+        <NuxtLink
+          to="/about"
+          @click="closeMobileMenu"
+          class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium rounded-xl bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+        >
+          <Icon name="heroicons:information-circle" class="h-4 w-4 mr-2" />
+          Om Sidan
+        </NuxtLink>
+        
+        <div class="flex justify-center pt-2">
+          <Button
+            variant="ghost"
+            size="sm"
+            :icon="isDarkMode ? 'heroicons:sun' : 'heroicons:moon'"
+            @click="toggleDarkMode"
+            :title="isDarkMode ? 'Växla till ljust läge' : 'Växla till mörkt läge'"
+          />
+        </div>
+      </div>
     </div>
 
   </header>
@@ -62,5 +120,17 @@
 
 <script setup lang="ts">
 const { isDarkMode, toggleDarkMode } = useDarkMode()
+
+// Mobile menu state
+const showMobileMenu = ref(false)
+
+// Mobile menu methods
+const toggleMobileMenu = () => {
+  showMobileMenu.value = !showMobileMenu.value
+}
+
+const closeMobileMenu = () => {
+  showMobileMenu.value = false
+}
 </script>
 

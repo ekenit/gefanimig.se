@@ -209,19 +209,19 @@
              </Card
           > <Card
             variant="default"
-            padding="md"
+            padding="sm"
             class="bg-yellow-50/50 dark:bg-yellow-900/20 border-yellow-200/50 dark:border-yellow-800/50 text-left"
             >
             <h4
-              class="text-lg font-semibold mb-4 text-yellow-800 dark:text-yellow-200 flex items-center"
+              class="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-yellow-800 dark:text-yellow-200 flex items-center"
             >
                <Icon
                 name="heroicons:exclamation-triangle"
-                class="h-5 w-5 mr-3"
+                class="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3"
               /> Viktig information
             </h4>
 
-            <div class="space-y-3 text-yellow-700 dark:text-yellow-300">
+            <div class="space-y-2 sm:space-y-3 text-yellow-700 dark:text-yellow-300">
 
               <div class="flex items-start space-x-3">
 

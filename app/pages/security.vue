@@ -4,7 +4,7 @@
     class="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-900 dark:to-red-950"
   >
 
-    <div class="py-16 px-4 mx-auto max-w-7xl">
+    <div class="py-8 sm:py-12 md:py-16 px-4 mx-auto max-w-7xl">
 
       <div class="max-w-4xl mx-auto">
          <!-- Breadcrumb --> <Breadcrumb current-page="Säkerhetsresurser" /> <!-- Header -->
@@ -12,12 +12,12 @@
         <div class="text-center mb-12">
 
           <h1
-            class="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 via-orange-600 to-red-800 dark:from-red-400 dark:via-orange-400 dark:to-red-600 bg-clip-text text-transparent"
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 via-orange-600 to-red-800 dark:from-red-400 dark:via-orange-400 dark:to-red-600 bg-clip-text text-transparent"
           >
              Säkerhetsresurser
           </h1>
 
-          <p class="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8">
+          <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8">
              Gratis verktyg för att kontrollera säkerhet - utan att betala
             bluffföretag
           </p>
