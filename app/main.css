@@ -1,0 +1,96 @@
+/* Using system fonts for privacy and performance */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif;
+  }
+}
+
+/* Optimized Page Transitions - Lighter and Faster */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Light slide transitions */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* Quick fade transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Light scale transitions */
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full hover:bg-gray-400 dark:hover:bg-gray-500 transition-colors duration-200;
+} 
