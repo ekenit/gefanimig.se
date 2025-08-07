@@ -28,6 +28,13 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  // Runtime config for environment variables
+  runtimeConfig: {
+    public: {
+      umamiWebsiteId: process.env.UMAMI_WEBSITE_ID,
+    },
+  },
+
   nitro: {
     compressPublicAssets: true,
     // Security headers via route rules

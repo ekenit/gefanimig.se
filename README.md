@@ -75,6 +75,18 @@ pnpm install
 yarn install
 ```
 
+### Environment Variables
+
+Copy `env.example` to `.env` and configure:
+
+```bash
+cp env.example .env
+```
+
+Required environment variables:
+
+- `UMAMI_WEBSITE_ID` - Your Umami website ID (get from Umami dashboard)
+
 ### Development
 
 ```bash
