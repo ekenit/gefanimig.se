@@ -1,6 +1,7 @@
 # Ge Fan i Mig - Remove your data from Swedish databases
 
 A free website that helps you remove your personal data from Swedish databases according to GDPR. No hidden costs, no tracking, just help when you need it.
+**Website:** [https://gefanimig.se](https://gefanimig.se)
 
 ## What does the site do?
 
