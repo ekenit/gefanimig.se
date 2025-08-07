@@ -6,6 +6,10 @@ primary_region = 'arn'
 [env]
   NODE_ENV = 'production'
 
+[metrics]
+port = 9091
+path = "/api/metrics"
+
 [[services]]
   protocol = 'tcp'
   internal_port = 3000

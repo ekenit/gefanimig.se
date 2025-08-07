@@ -132,7 +132,7 @@
                       >
 
                         <li>
-                          1. Redigera ämne och meddelande ovan efter behov
+                           1. Redigera ämne och meddelande ovan efter behov
                         </li>
 
                         <li>2. Ersätt "Förnamn Efternamn" med ditt namn</li>
@@ -140,11 +140,12 @@
                         <li>3. Ersätt "Personnummer" med ditt personnummer</li>
 
                         <li>
-                          4. Klicka "Kopiera mall" eller "Öppna i e-postklient"
+                           4. Klicka "Kopiera mall" eller "Öppna i e-postklient"
+
                         </li>
 
                         <li>
-                          5. Skicka till: <strong
+                           5. Skicka till: <strong
                             class="text-blue-900 dark:text-blue-100"
                             >{{ currentSite?.email }}</strong
                           >
@@ -240,6 +241,9 @@ const handleCopyTemplate = async () => {
 
   if (message.includes('kopierats')) {
     showSuccess(message)
+    // Track template copy
+    const { $trackEmailTemplateUsage } = useNuxtApp()
+    $trackEmailTemplateUsage('copy')
   } else {
     showError(message)
   }
@@ -263,6 +267,10 @@ const handleSendEmail = () => {
 
     const { showSuccess } = useToast()
     showSuccess('E-postklient öppnad!')
+
+    // Track email client open
+    const { $trackEmailTemplateUsage } = useNuxtApp()
+    $trackEmailTemplateUsage('open_email_client')
   }
 }
 </script>

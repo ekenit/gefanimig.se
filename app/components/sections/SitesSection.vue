@@ -67,6 +67,7 @@
                   variant="secondary"
                   icon="heroicons:arrow-top-right-on-square"
                   class="w-full justify-center"
+                  @click="trackSiteClick(site)"
                   > {{ site.linkText || 'Besök webbplats' }} </Button
                 > <!-- Email template button (only for sites with email) -->
                 <Button
@@ -198,7 +199,18 @@ const copyEmailAddress = async (email: string) => {
 }
 
 const openEmailModal = (site: Site) => {
+  // Track email modal open
+  const { $trackInteraction, $trackClick } = useNuxtApp()
+  $trackInteraction('email_modal_open', site.name)
+  $trackClick('email_modal_button', site.name)
+
   emit('open-email-modal', site)
+}
+
+const trackSiteClick = (site: Site) => {
+  const { $trackInteraction, $trackClick } = useNuxtApp()
+  $trackInteraction('site_visit', site.name)
+  $trackClick('site_visit_button', site.name)
 }
 </script>
 

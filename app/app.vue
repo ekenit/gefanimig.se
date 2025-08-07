@@ -19,7 +19,8 @@
           > {{ isDarkMode ? 'Ljust läge' : 'Mörkt läge' }} </Button
         > </template
       > </Footer
-    > <!-- Toast Notifications --> <Toast />
+    > <!-- Toast Notifications --> <Toast /> <!-- Metrics Debug (development only) -->
+    <MetricsDebug />
   </div>
 
 </template>
@@ -63,3 +64,4 @@ onMounted(() => {
   }
 })
 </script>
+
