@@ -87,7 +87,7 @@
                   <h4 class="font-medium mb-2">100% Gratis</h4>
 
                   <p class="text-sm text-gray-600 dark:text-gray-400">
-                    Inget företag, ingen vinst
+                     Inget företag, ingen vinst
                   </p>
 
                 </div>
@@ -106,7 +106,7 @@
                   <h4 class="font-medium mb-2">Öppen källkod</h4>
 
                   <p class="text-sm text-gray-600 dark:text-gray-400">
-                    Transparent och verifierbar
+                     Transparent och verifierbar
                   </p>
 
                 </div>
@@ -125,7 +125,7 @@
                   <h4 class="font-medium mb-2">Ingen tracking</h4>
 
                   <p class="text-sm text-gray-600 dark:text-gray-400">
-                    Respekterar din integritet
+                     Respekterar din integritet
                   </p>
 
                 </div>
@@ -154,7 +154,7 @@
            <Card variant="glass" padding="lg"
             >
             <h3 class="text-xl font-semibold mb-6 text-center">
-              Så fungerar det
+               Så fungerar det
             </h3>
 
             <div class="grid sm:grid-cols-3 gap-6 text-center">
@@ -172,7 +172,7 @@
                 <h4 class="font-medium mb-2">Hitta sajterna</h4>
 
                 <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Lista över svenska databaser som lagrar dina uppgifter
+                   Lista över svenska databaser som lagrar dina uppgifter
                 </p>
 
               </div>
@@ -190,7 +190,7 @@
                 <h4 class="font-medium mb-2">Använd GDPR-mall</h4>
 
                 <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Färdiga e-postmallar för att begära borttagning
+                   Färdiga e-postmallar för att begära borttagning
                 </p>
 
               </div>
@@ -208,7 +208,7 @@
                 <h4 class="font-medium mb-2">Få bekräftelse</h4>
 
                 <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Företagen måste svara inom 30 dagar enligt lag
+                   Företagen måste svara inom 30 dagar enligt lag
                 </p>
 
               </div>
@@ -240,8 +240,8 @@
              </Card
           >
         </div>
-         <!-- Calendar Reminder --> <AboutCalendarReminder /> <!-- Navigation -->
-
+         <!-- About creator --> <AboutCreator /> <!-- Calendar Reminder -->
+        <AboutCalendarReminder /> <!-- Navigation -->
         <div class="mt-12 text-center">
            <Button
             tag="a"
@@ -343,3 +343,4 @@ definePageMeta({
   },
 })
 </script>
+
