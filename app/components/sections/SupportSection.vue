@@ -11,7 +11,7 @@
           class="bg-blue-50/50 dark:bg-blue-900/10 border-blue-200/50 dark:border-blue-800/50"
           >
           <p class="text-sm text-blue-700 dark:text-blue-300">
-             🙏 Om du tycker denna guide hjälpte dig kan du <Button
+             🙏 Om du vill kan du <Button
               tag="NuxtLink"
               to="https://buymeacoffee.com/ekenit"
               variant="ghost"
@@ -30,3 +30,4 @@
   </section>
 
 </template>
+

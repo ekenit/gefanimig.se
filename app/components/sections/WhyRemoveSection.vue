@@ -23,7 +23,7 @@
             <h3
               class="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100"
             >
-              Varför ta bort din information?
+               Varför ta bort din information?
             </h3>
 
           </div>
@@ -41,11 +41,11 @@
                 <div>
 
                   <p class="font-medium text-gray-900 dark:text-gray-100">
-                    Folk som behöver nå dig har redan ditt nummer
+                     Folk som behöver nå dig har redan ditt nummer
                   </p>
 
                   <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                    Vänner, familj och viktiga kontakter vet redan hur de når
+                     Vänner, familj och viktiga kontakter vet redan hur de når
                     dig.
                   </p>
 
@@ -62,11 +62,11 @@
                 <div>
 
                   <p class="font-medium text-gray-900 dark:text-gray-100">
-                    Allt annat är spam
+                     Det mesta andra är spam
                   </p>
 
                   <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
-                    Telefonförsäljare, bedragare och robotsamtal som stör din
+                     Telefonförsäljare, bedragare och robotsamtal som stör din
                     vardag.
                   </p>
 
@@ -83,15 +83,18 @@
               <p
                 class="text-sm font-medium mb-2 text-blue-800 dark:text-blue-200"
               >
-                💡 Så enkelt är det:
+                 💡 Men det finns undantag:
               </p>
 
               <p
                 class="text-sm text-blue-700 dark:text-blue-300 leading-relaxed"
               >
-                 Du behöver inte vara tillgänglig för random företag som hittat
-                dig i en databas. Att ha personuppgifter på dessa sajter skapar
-                bara onödig exponering mot skit du inte vill ha.
+                 Du behöver inte vara sökbar i publika databaser. Vården,
+                myndigheter och viktiga företag har redan den information de
+                behöver för att kontakta dig. Och personer du själv vill ha
+                kontakt med, som tandläkaren, banken eller skolan, har redan
+                ditt nummer eller e-post. Att synas öppet online behövs sällan,
+                men ökar din exponering mot oönskad kontakt.
               </p>
                </Card
             >
@@ -105,3 +108,4 @@
   </section>
 
 </template>
+

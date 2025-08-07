@@ -7,7 +7,7 @@ import type { Site } from '~/types'
 export const sites: Site[] = [
   {
     name: 'Ratsit.se',
-    method: 'Via Mobilt BankID - Enklaste metoden',
+    method: 'Via Mobilt BankID',
     link: 'https://www.ratsit.se/tabort',
     linkText: 'Gå till borttagningsformulär',
   },
@@ -20,13 +20,13 @@ export const sites: Site[] = [
   },
   {
     name: 'Hitta.se',
-    method: 'Via Mobilt BankID - Direktborttagning',
+    method: 'Via Mobilt BankID',
     link: 'https://www.hitta.se/kontakta-oss/ta-bort-kontaktsida',
     linkText: 'Gå till borttagningsformulär',
   },
   {
     name: 'Eniro.se',
-    method: 'Via Mobilt BankID - Automatisk process',
+    method: 'Via Mobilt BankID',
     link: 'https://uppdatera.eniro.se/person',
     linkText: 'Gå till borttagningsformulär',
   },

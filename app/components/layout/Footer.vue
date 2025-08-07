@@ -17,7 +17,7 @@
         </div>
          <!-- Tagline -->
         <p class="text-gray-400 mb-6">
-           En privatperson som blev less på spam och bluffföretag
+           En privatperson som blev less på spam
         </p>
          <!-- Quick Facts -->
         <div
@@ -45,7 +45,7 @@
               <div
                 class="w-2 h-2 bg-purple-500 rounded-full flex-shrink-0"
               ></div>
-               <span class="text-gray-300">Öppen källkod, ingen bullshit</span>
+               <span class="text-gray-300">Öppen källkod</span>
             </div>
 
             <div class="flex items-center space-x-2">
@@ -73,27 +73,7 @@
           > <slot name="dark-mode-toggle" />
         </div>
          <!-- Simple Footer -->
-        <div class="border-t border-gray-700 pt-6 mt-6">
-          <div class="text-center space-y-4">
-            <!-- Share Link -->
-            <div>
-              <Button
-                variant="ghost"
-                size="sm"
-                @click="copyLink"
-                class="text-gray-400 hover:text-gray-300 text-sm"
-              >
-                <Icon name="heroicons:link" class="h-4 w-4 mr-2" />
-                Dela denna sida
-              </Button>
-            </div>
-            
-            <!-- Copyright -->
-            <p class="text-xs text-gray-500">
-              © 2025 Ge Fan i Mig • Använd på egen risk • 100% gratis
-            </p>
-          </div>
-        </div>
+        <div class="border-t border-gray-700 pt-6 mt-6"> </div>
 
       </div>
 

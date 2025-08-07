@@ -14,11 +14,15 @@
            Om Ge Fan i Mig
         </h1>
 
-        <p class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8">
-           Varför du borde ta bort dina uppgifter från gamla databaser
+        <p
+          class="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-8"
+        >
+           Varför du borde ta bort dina uppgifter från svenska databaser
         </p>
-
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12 md:mt-16">
+         <!-- Core Value Proposition -->
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12 md:mt-16"
+        >
            <Card variant="glass" hoverable padding="lg"
             >
             <div
@@ -33,9 +37,9 @@
             <h3 class="text-lg font-semibold mb-4">Varför bry sig?</h3>
 
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-               Folk som verkligen behöver nå dig har redan ditt nummer. Allt
-              annat är spam, telefonförsäljare och bedragare som hittar dig via
-              dessa databaser. Så enkelt är det.
+               De som verkligen behöver nå dig har redan ditt nummer. Resten är
+              oftast spam, telefonförsäljare och bedragare som hittar dig via
+              publika databaser.
             </p>
              </Card
           > <Card variant="glass" hoverable padding="lg"
@@ -52,22 +56,197 @@
             <h3 class="text-lg font-semibold mb-4">Gratis vs Bluffföretag</h3>
 
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-               Andra sajter tar 50-200 kr/månad för samma information som finns
-              här gratis. Samma lagar, samma rättigheter, samma resultat. De
-              lurar dig bara.
+               Andra sajter tar 50–200 kr i månaden för samma information som
+              finns här gratis. Det är samma lagar, samma rättigheter, samma
+              resultat. Låt dig inte luras.
             </p>
              </Card
           >
         </div>
-         <!-- Project Details --> <AboutProjectDetails /> <!-- Scam Alert Section -->
-        <AboutScamAlert /> <!-- About the Creator Section --> <AboutCreator /> <!-- Calendar Reminder Section -->
-        <AboutCalendarReminder /> <!-- Legal Disclaimer -->
-        <AboutLegalDisclaimer /> <!-- How it works --> <AboutHowItWorks />
+         <!-- Quick Facts & GitHub -->
         <div class="mt-12">
+           <Card variant="glass" padding="lg"
+            >
+            <div class="text-center">
+
+              <h3 class="text-xl font-semibold mb-6">Om projektet</h3>
+
+              <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+
+                <div class="text-center">
+
+                  <div
+                    class="h-12 w-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-3"
+                  >
+                     <Icon
+                      name="heroicons:heart"
+                      class="h-6 w-6 text-green-600 dark:text-green-400"
+                    />
+                  </div>
+
+                  <h4 class="font-medium mb-2">100% Gratis</h4>
+
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                     Inget företag, ingen vinst
+                  </p>
+
+                </div>
+
+                <div class="text-center">
+
+                  <div
+                    class="h-12 w-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-3"
+                  >
+                     <Icon
+                      name="heroicons:code-bracket"
+                      class="h-6 w-6 text-blue-600 dark:text-blue-400"
+                    />
+                  </div>
+
+                  <h4 class="font-medium mb-2">Öppen källkod</h4>
+
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                     Transparent och verifierbar
+                  </p>
+
+                </div>
+
+                <div class="text-center sm:col-span-2 lg:col-span-1">
+
+                  <div
+                    class="h-12 w-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mx-auto mb-3"
+                  >
+                     <Icon
+                      name="heroicons:shield-check"
+                      class="h-6 w-6 text-purple-600 dark:text-purple-400"
+                    />
+                  </div>
+
+                  <h4 class="font-medium mb-2">Ingen tracking</h4>
+
+                  <p class="text-sm text-gray-600 dark:text-gray-400">
+                     Respekterar din integritet
+                  </p>
+
+                </div>
+
+              </div>
+               <!-- GitHub Link -->
+              <div class="pt-6 border-t border-gray-200 dark:border-gray-700">
+                 <Button
+                  tag="NuxtLink"
+                  to="https://github.com/ekenit/gefanimig.se"
+                  external
+                  target="_blank"
+                  variant="secondary"
+                  icon="heroicons:code-bracket"
+                  class="mx-auto"
+                  > Se källkoden på GitHub </Button
+                >
+              </div>
+
+            </div>
+             </Card
+          >
+        </div>
+         <!-- How It Works - Simplified -->
+        <div class="mt-12">
+           <Card variant="glass" padding="lg"
+            >
+            <h3 class="text-xl font-semibold mb-6 text-center">
+               Så fungerar det
+            </h3>
+
+            <div class="grid sm:grid-cols-3 gap-6 text-center">
+
+              <div>
+
+                <div
+                  class="h-10 w-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-3"
+                >
+                   <span class="font-bold text-blue-600 dark:text-blue-400"
+                    >1</span
+                  >
+                </div>
+
+                <h4 class="font-medium mb-2">Hitta sajterna</h4>
+
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                   Lista över svenska databaser som lagrar dina uppgifter
+                </p>
+
+              </div>
+
+              <div>
+
+                <div
+                  class="h-10 w-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-3"
+                >
+                   <span class="font-bold text-blue-600 dark:text-blue-400"
+                    >2</span
+                  >
+                </div>
+
+                <h4 class="font-medium mb-2">Använd GDPR-mall</h4>
+
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                   Färdiga e-postmallar för att begära borttagning
+                </p>
+
+              </div>
+
+              <div>
+
+                <div
+                  class="h-10 w-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-3"
+                >
+                   <span class="font-bold text-blue-600 dark:text-blue-400"
+                    >3</span
+                  >
+                </div>
+
+                <h4 class="font-medium mb-2">Få bekräftelse</h4>
+
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                   Företagen måste svara inom 30 dagar enligt lag
+                </p>
+
+              </div>
+
+            </div>
+             </Card
+          >
+        </div>
+         <!-- Legal Notice - Simplified -->
+        <div class="mt-12">
+           <Card variant="glass" padding="lg"
+            >
+            <div class="text-center">
+               <Icon
+                name="heroicons:information-circle"
+                class="h-8 w-8 text-yellow-600 dark:text-yellow-400 mx-auto mb-4"
+              />
+              <h3 class="text-lg font-semibold mb-4">Viktig information</h3>
+
+              <p
+                class="text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto"
+              >
+                 Denna sajt är gjord av en privatperson och är inte juridisk
+                rådgivning. Använd informationen på egen risk. Resultatet kan
+                variera beroende på hur företagen hanterar förfrågningar.
+              </p>
+
+            </div>
+             </Card
+          >
+        </div>
+         <!-- About creator --> <AboutCreator /> <!-- Calendar Reminder -->
+        <AboutCalendarReminder /> <!-- Navigation -->
+        <div class="mt-12 text-center">
            <Button
             tag="a"
             href="/"
-            variant="secondary"
+            variant="primary"
             icon="heroicons:arrow-left"
             > Tillbaka till startsidan </Button
           >
@@ -164,3 +343,4 @@ definePageMeta({
   },
 })
 </script>
+
