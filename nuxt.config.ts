@@ -56,6 +56,18 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
+      htmlAttrs: {
+        lang: 'sv'
+      },
+      meta: [
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'theme-color', content: '#3B82F6' },
+        { property: 'og:image', content: 'https://gefanimig.se/og-image.jpg' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:image:alt', content: 'Ge Fan i Mig - GDPR verktyg för Sverige' },
+        { name: 'twitter:image', content: 'https://gefanimig.se/og-image.jpg' },
+      ]
     }
   }
 })

@@ -67,12 +67,45 @@
 <script setup lang="ts">
 // SEO and Meta
 useHead({
-  title: 'Om oss - Ge Fan i Mig',
+  title: 'Om Ge Fan i Mig - Varför ta bort personuppgifter från databaser',
   meta: [
-    { name: 'description', content: 'Varför du borde ta bort dina uppgifter från svenska databaser och undvika bluffföretag som tar betalt för samma information.' },
-    { name: 'keywords', content: 'GDPR, personuppgifter, svenska databaser, integritet, om oss, Ge Fan i Mig, bluffföretag, gratis' },
-    { property: 'og:title', content: 'Om oss - Ge Fan i Mig' },
-    { property: 'og:description', content: 'Läs varför du borde rensa dina personuppgifter och undvika betaltjänster som lurar dig.' },
+    { name: 'description', content: 'Lär dig varför du borde ta bort dina personuppgifter från svenska databaser och undvika bluffföretag som tar betalt för samma information. Gratis GDPR-guide.' },
+    { name: 'keywords', content: 'GDPR, personuppgifter, svenska databaser, integritet, om oss, Ge Fan i Mig, bluffföretag, gratis, telefonförsäljare, spam' },
+    { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+    { name: 'language', content: 'sv' },
+    { name: 'geo.region', content: 'SE' },
+    { property: 'og:title', content: 'Om Ge Fan i Mig - Varför ta bort personuppgifter från databaser' },
+    { property: 'og:description', content: 'Lär dig varför du borde ta bort dina personuppgifter från svenska databaser och undvika bluffföretag.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://gefanimig.se/about' },
+    { property: 'og:site_name', content: 'Ge Fan i Mig' },
+    { property: 'og:locale', content: 'sv_SE' },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:title', content: 'Om Ge Fan i Mig - Varför ta bort personuppgifter från databaser' },
+    { name: 'twitter:description', content: 'Lär dig varför du borde ta bort dina personuppgifter från svenska databaser och undvika bluffföretag.' },
+    { name: 'canonical', content: 'https://gefanimig.se/about' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://gefanimig.se/about' },
+    { rel: 'alternate', hreflang: 'sv', href: 'https://gefanimig.se/about' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'AboutPage',
+        name: 'Om Ge Fan i Mig',
+        description: 'Lär dig varför du borde ta bort dina personuppgifter från svenska databaser',
+        url: 'https://gefanimig.se/about',
+        inLanguage: 'sv',
+        about: {
+          '@type': 'Organization',
+          name: 'Ge Fan i Mig',
+          description: 'Gratis GDPR-verktyg för att ta bort personuppgifter från svenska databaser'
+        }
+      })
+    }
   ]
 })
 

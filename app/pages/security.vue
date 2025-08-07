@@ -793,12 +793,67 @@
 <script setup lang="ts">
 // SEO and Meta
 useHead({
-  title: 'Säkerhetsresurser - Gratis verktyg mot bluffföretag',
+  title: 'Säkerhetsresurser - Gratis verktyg mot bluffföretag | Ge Fan i Mig',
   meta: [
-    { name: 'description', content: 'Gratis säkerhetsverktyg för att kolla dataläckor, lösenord och e-postsäkerhet. Betala inte bluffföretag för det som redan är gratis.' },
-    { name: 'keywords', content: 'dataläckor, lösenordssäkerhet, Have I Been Pwned, Bitwarden, ProtonMail, gratis säkerhet' },
+    { name: 'description', content: 'Gratis säkerhetsverktyg för att kolla dataläckor, lösenord och e-postsäkerhet. Betala inte bluffföretag för det som redan är gratis. Have I Been Pwned, Bitwarden, ProtonMail.' },
+    { name: 'keywords', content: 'dataläckor, lösenordssäkerhet, Have I Been Pwned, Bitwarden, ProtonMail, gratis säkerhet, bluffföretag, identitetsskydd, dark web monitoring' },
+    { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' },
+    { name: 'language', content: 'sv' },
+    { name: 'geo.region', content: 'SE' },
     { property: 'og:title', content: 'Säkerhetsresurser - Gratis verktyg mot bluffföretag' },
     { property: 'og:description', content: 'Alla säkerhetsverktyg du behöver, helt gratis. Säg nej till företag som säljer det som redan finns gratis.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://gefanimig.se/security' },
+    { property: 'og:site_name', content: 'Ge Fan i Mig' },
+    { property: 'og:locale', content: 'sv_SE' },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:title', content: 'Säkerhetsresurser - Gratis verktyg mot bluffföretag' },
+    { name: 'twitter:description', content: 'Alla säkerhetsverktyg du behöver, helt gratis. Säg nej till företag som säljer det som redan finns gratis.' },
+    { name: 'canonical', content: 'https://gefanimig.se/security' },
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://gefanimig.se/security' },
+    { rel: 'alternate', hreflang: 'sv', href: 'https://gefanimig.se/security' },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Säkerhetsresurser',
+        description: 'Gratis säkerhetsverktyg för att kolla dataläckor och lösenordssäkerhet',
+        url: 'https://gefanimig.se/security',
+        inLanguage: 'sv',
+        about: {
+          '@type': 'Thing',
+          name: 'Cybersäkerhet',
+          description: 'Gratis verktyg för att skydda din digitala säkerhet'
+        },
+        mainEntity: {
+          '@type': 'ItemList',
+          name: 'Gratis säkerhetsverktyg',
+          description: 'Lista över gratis säkerhetsverktyg som ersätter betaltjänster',
+          itemListElement: [
+            {
+              '@type': 'ListItem',
+              name: 'Have I Been Pwned',
+              description: 'Kolla om din e-post finns i dataläckor'
+            },
+            {
+              '@type': 'ListItem',
+              name: 'Bitwarden',
+              description: 'Gratis lösenordshanterare'
+            },
+            {
+              '@type': 'ListItem',
+              name: 'ProtonMail',
+              description: 'Säker e-posttjänst'
+            }
+          ]
+        }
+      })
+    }
   ]
 })
 
