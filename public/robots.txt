@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://gefanimig.se/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
