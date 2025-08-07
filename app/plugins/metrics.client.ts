@@ -66,107 +66,95 @@ export default defineNuxtPlugin(() => {
 
 // Privacy-safe tracking functions
 function trackPageView(page: string) {
-  // Only track in production
-  if (process.env.NODE_ENV === 'production') {
-    fetch('/api/metrics/track', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'page_view',
-        page,
-      }),
-    }).catch(() => {
-      // Silently fail - metrics are not critical
-    })
-  }
+  // Track in both development and production for testing
+  fetch('/api/metrics/track', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'page_view',
+      page,
+    }),
+  }).catch(() => {
+    // Silently fail - metrics are not critical
+  })
 }
 
 function trackUniqueVisitor(page: string) {
-  if (process.env.NODE_ENV === 'production') {
-    fetch('/api/metrics/track', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'unique_visitor',
-        page,
-      }),
-    }).catch(() => {
-      // Silently fail
-    })
-  }
+  fetch('/api/metrics/track', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'unique_visitor',
+      page,
+    }),
+  }).catch(() => {
+    // Silently fail
+  })
 }
 
 function trackSessionDuration(page: string, duration: number) {
-  if (process.env.NODE_ENV === 'production') {
-    fetch('/api/metrics/track', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'session_duration',
-        page,
-        duration,
-      }),
-    }).catch(() => {
-      // Silently fail
-    })
-  }
+  fetch('/api/metrics/track', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'session_duration',
+      page,
+      duration,
+    }),
+  }).catch(() => {
+    // Silently fail
+  })
 }
 
 function trackSiteInteraction(action: string, site?: string) {
-  if (process.env.NODE_ENV === 'production') {
-    fetch('/api/metrics/track', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'site_interaction',
-        action,
-        site,
-      }),
-    }).catch(() => {
-      // Silently fail
-    })
-  }
+  fetch('/api/metrics/track', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'site_interaction',
+      action,
+      site,
+    }),
+  }).catch(() => {
+    // Silently fail
+  })
 }
 
 function trackClickInternal(element: string, page: string) {
-  if (process.env.NODE_ENV === 'production') {
-    fetch('/api/metrics/track', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'click',
-        element,
-        page,
-      }),
-    }).catch(() => {
-      // Silently fail
-    })
-  }
+  fetch('/api/metrics/track', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'click',
+      element,
+      page,
+    }),
+  }).catch(() => {
+    // Silently fail
+  })
 }
 
 function trackEmailTemplateUsageInternal(action: 'copy' | 'open_email_client') {
-  if (process.env.NODE_ENV === 'production') {
-    fetch('/api/metrics/track', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        type: 'email_template_usage',
-        action,
-      }),
-    }).catch(() => {
-      // Silently fail
-    })
-  }
+  fetch('/api/metrics/track', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      type: 'email_template_usage',
+      action,
+    }),
+  }).catch(() => {
+    // Silently fail
+  })
 }

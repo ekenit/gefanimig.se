@@ -121,7 +121,7 @@
                     >
                   </div>
                    <Button
-                    @click="copyEmailAddress(site.email!)"
+                    @click="copyEmailAddress(site.email!, site)"
                     variant="ghost"
                     size="sm"
                     icon="heroicons:clipboard"
@@ -188,11 +188,15 @@ const emit = defineEmits<{
   'open-email-modal': [site: Site]
 }>()
 
-const copyEmailAddress = async (email: string) => {
+const copyEmailAddress = async (email: string, site: Site) => {
   const { showSuccess, showError } = useToast()
   try {
     await navigator.clipboard.writeText(email)
     showSuccess(`E-postadress ${email} kopierad!`)
+
+    // Track the copy action
+    const { $trackClick } = useNuxtApp()
+    $trackClick('copy_email_button', site.name)
   } catch (err) {
     showError('Kunde inte kopiera e-postadressen')
   }

@@ -32,6 +32,35 @@ The site is built with modern tools to be fast and secure:
 - **Tailwind CSS** - Modern styling with dark mode support
 - **TypeScript** - Type-safe code
 - **Heroicons** - Beautiful icons
+- **Prometheus Metrics** - Anonymous visitor analytics (GDPR compliant)
+
+## Analytics & Privacy
+
+### 📊 **Anonymous Visitor Tracking**
+
+We collect **only anonymous, aggregated data** to understand how the site is used:
+
+- **Page views** - Which pages are most popular
+- **Session duration** - How long users spend on pages
+- **Click patterns** - Which buttons/elements get clicked most
+- **Site interactions** - Which databases users interact with most
+
+### 🔒 **What We DON'T Track**
+
+- Personal information (names, emails, addresses)
+- User identification or tracking
+- IP addresses or location data
+- Session data or user behavior patterns
+- Any data that could identify individuals
+
+### 🛡️ **GDPR Compliant**
+
+Our analytics are designed to be GDPR-compliant:
+
+- **Session-based counting** (not personal identification)
+- **No cookies or tracking** beyond basic page views
+- **Anonymous aggregation** only
+- **No cross-site tracking**
 
 ## Getting started
 
@@ -53,6 +82,15 @@ yarn install
 npm run dev
 # Site is available at http://localhost:3000
 ```
+
+### Testing Metrics
+
+```bash
+# Test the metrics system locally
+node scripts/test-metrics.js
+```
+
+**Note:** The test script requires the development server to be running (`npm run dev`).
 
 ### Production
 
