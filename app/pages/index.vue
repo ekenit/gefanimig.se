@@ -90,7 +90,7 @@ useHead({
     { name: 'twitter:image', content: 'https://gefanimig.se/og-image.png' },
     { name: 'theme-color', content: '#3B82F6' },
     { name: 'msapplication-TileColor', content: '#3B82F6' },
-    { name: 'apple-mobile-web-app-capable', content: 'yes' },
+    { name: 'mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
     { name: 'apple-mobile-web-app-title', content: 'Ge Fan i Mig' },
     { name: 'canonical', content: 'https://gefanimig.se' },
