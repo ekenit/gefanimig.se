@@ -20,7 +20,7 @@
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <Button 
                 tag="a"
-                href="https://imy.se/privatperson/lamna-klagomal/"
+                href="https://www.imy.se/privatperson/utfora-arenden/filtersida/"
                 external
                 target="_blank"
                 variant="primary"
