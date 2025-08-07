@@ -19,8 +19,7 @@
           > {{ isDarkMode ? 'Ljust läge' : 'Mörkt läge' }} </Button
         > </template
       > </Footer
-    > <!-- Toast Notifications --> <Toast /> <!-- Metrics Debug (development only) -->
-    <MetricsDebug />
+    > <!-- Toast Notifications --> <Toast />
   </div>
 
 </template>

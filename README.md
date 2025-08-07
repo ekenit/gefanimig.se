@@ -32,18 +32,18 @@ The site is built with modern tools to be fast and secure:
 - **Tailwind CSS** - Modern styling with dark mode support
 - **TypeScript** - Type-safe code
 - **Heroicons** - Beautiful icons
-- **Prometheus Metrics** - Anonymous visitor analytics (GDPR compliant)
+- **Umami Analytics** - Privacy-focused analytics (GDPR compliant)
 
 ## Analytics & Privacy
 
-### 📊 **Anonymous Visitor Tracking**
+### 📊 **Privacy-Focused Analytics**
 
-We collect **only anonymous, aggregated data** to understand how the site is used:
+We use **Umami** for anonymous analytics that respect your privacy:
 
 - **Page views** - Which pages are most popular
-- **Session duration** - How long users spend on pages
-- **Click patterns** - Which buttons/elements get clicked most
-- **Site interactions** - Which databases users interact with most
+- **Visitor counts** - Anonymous visitor statistics
+- **Referrer tracking** - Where visitors come from
+- **Device information** - Browser and device types (anonymous)
 
 ### 🔒 **What We DON'T Track**
 
@@ -55,12 +55,12 @@ We collect **only anonymous, aggregated data** to understand how the site is use
 
 ### 🛡️ **GDPR Compliant**
 
-Our analytics are designed to be GDPR-compliant:
+Umami is designed to be GDPR-compliant:
 
-- **Session-based counting** (not personal identification)
-- **No cookies or tracking** beyond basic page views
-- **Anonymous aggregation** only
-- **No cross-site tracking**
+- **No cookies** - Uses localStorage only
+- **Anonymous data** - No personal information collected
+- **Open source** - Transparent and verifiable
+- **Self-hosted** - We control our own data
 
 ## Getting started
 
@@ -80,17 +80,8 @@ yarn install
 ```bash
 # Start development server
 npm run dev
-# Site is available at http://localhost:3000
+# Site is available at http://localhost:3001
 ```
-
-### Testing Metrics
-
-```bash
-# Test the metrics system locally
-node scripts/test-metrics.js
-```
-
-**Note:** The test script requires the development server to be running (`npm run dev`).
 
 ### Production
 

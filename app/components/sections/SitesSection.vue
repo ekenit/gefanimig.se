@@ -121,7 +121,7 @@
                     >
                   </div>
                    <Button
-                    @click="copyEmailAddress(site.email!, site)"
+                    @click="copyEmailAddress(site.email!)"
                     variant="ghost"
                     size="sm"
                     icon="heroicons:clipboard"
@@ -188,33 +188,22 @@ const emit = defineEmits<{
   'open-email-modal': [site: Site]
 }>()
 
-const copyEmailAddress = async (email: string, site: Site) => {
+const copyEmailAddress = async (email: string) => {
   const { showSuccess, showError } = useToast()
   try {
     await navigator.clipboard.writeText(email)
     showSuccess(`E-postadress ${email} kopierad!`)
-
-    // Track the copy action
-    const { $trackClick } = useNuxtApp()
-    $trackClick('copy_email_button', site.name)
   } catch (err) {
     showError('Kunde inte kopiera e-postadressen')
   }
 }
 
 const openEmailModal = (site: Site) => {
-  // Track email modal open
-  const { $trackInteraction, $trackClick } = useNuxtApp()
-  $trackInteraction('email_modal_open', site.name)
-  $trackClick('email_modal_button', site.name)
-
   emit('open-email-modal', site)
 }
 
 const trackSiteClick = (site: Site) => {
-  const { $trackInteraction, $trackClick } = useNuxtApp()
-  $trackInteraction('site_visit', site.name)
-  $trackClick('site_visit_button', site.name)
+  // No tracking needed - Umami handles this automatically
 }
 </script>
 

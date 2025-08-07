@@ -241,9 +241,6 @@ const handleCopyTemplate = async () => {
 
   if (message.includes('kopierats')) {
     showSuccess(message)
-    // Track template copy
-    const { $trackEmailTemplateUsage } = useNuxtApp()
-    $trackEmailTemplateUsage('copy')
   } else {
     showError(message)
   }
@@ -267,10 +264,6 @@ const handleSendEmail = () => {
 
     const { showSuccess } = useToast()
     showSuccess('E-postklient öppnad!')
-
-    // Track email client open
-    const { $trackEmailTemplateUsage } = useNuxtApp()
-    $trackEmailTemplateUsage('open_email_client')
   }
 }
 </script>
