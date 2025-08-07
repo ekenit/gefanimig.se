@@ -91,8 +91,9 @@
 </template>
 
 <script setup lang="ts">
+import { downloadCalendarReminder } from '~/utils/calendar'
+
 const handleDownloadCalendarReminder = () => {
-  const { downloadCalendarReminder } = useCalendar()
   downloadCalendarReminder()
 }
 </script>

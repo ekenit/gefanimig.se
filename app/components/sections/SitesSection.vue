@@ -38,9 +38,21 @@
 
                 </div>
 
-                <p class="text-gray-600 dark:text-gray-300 mb-4 pl-11">
-                  {{ site.method }}
-                </p>
+                <div class="pl-11 mb-4">
+                  <div class="flex flex-col sm:block">
+                    <p class="text-gray-600 dark:text-gray-300">
+                      {{ site.method }}
+                    </p>
+                    
+                    <!-- Mobile warning as part of method text -->
+                    <div 
+                      v-if="!site.method.toLowerCase().includes('bankid')"
+                      class="sm:hidden mt-1 text-xs text-yellow-600 dark:text-yellow-400 font-medium"
+                    >
+                      {{ site.email ? '💡 E-postguide finns' : '⚠️ Ingen BankID' }}
+                    </div>
+                  </div>
+                </div>
                  <!-- Email display for non-form sites -->
                 <div
                   v-if="site.email && !site.method.includes('webbformulär')"
@@ -84,81 +96,45 @@
                 </div>
 
               </div>
-               <!-- Help box for non-BankID sites -->
+               <!-- Desktop help box for non-BankID sites -->
               <div
                 v-if="!site.method.toLowerCase().includes('bankid')"
-                class="flex-shrink-0 w-72"
+                class="hidden sm:block flex-shrink-0 w-72"
               >
-
-                <div
-                  class="bg-yellow-50/80 dark:bg-yellow-900/20 border border-yellow-200/60 dark:border-yellow-800/60 rounded-xl p-4"
-                >
-
+                <div class="bg-yellow-50/80 dark:bg-yellow-900/20 border border-yellow-200/60 dark:border-yellow-800/60 rounded-xl p-4">
                   <div class="flex items-start space-x-3">
-
-                    <div
-                      class="flex-shrink-0 w-8 h-8 bg-yellow-100 dark:bg-yellow-900/40 rounded-lg flex items-center justify-center"
-                    >
-                       <Icon
+                    <div class="flex-shrink-0 w-8 h-8 bg-yellow-100 dark:bg-yellow-900/40 rounded-lg flex items-center justify-center">
+                      <Icon
                         name="heroicons:information-circle"
                         class="h-4 w-4 text-yellow-600 dark:text-yellow-400"
                       />
                     </div>
 
                     <div class="min-w-0">
-
-                      <h5
-                        class="text-sm font-semibold text-yellow-800 dark:text-yellow-200 mb-2"
-                      >
-                         {{ site.email ? 'E-postguide' : 'Ingen BankID' }}
+                      <h5 class="text-sm font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+                        {{ site.email ? 'E-postguide' : 'Ingen BankID' }}
                       </h5>
 
-                      <div
-                        class="text-xs text-yellow-700 dark:text-yellow-300 space-y-1"
-                      >
-
+                      <div class="text-xs text-yellow-700 dark:text-yellow-300 space-y-1 leading-relaxed">
                         <p v-if="site.email">
-                           1. Besök webbplatsen först - kolla om de har nya
-                          processer
+                          1. Besök webbplatsen först - kolla om de har nya processer
                         </p>
-
                         <p v-if="site.email">
-                           2. Om inget finns, skicka e-post till: <strong>{{
-                            site.email
-                          }}</strong
-                          >
+                          2. Om inget finns, skicka e-post till: <strong>{{ site.email }}</strong>
                         </p>
-
                         <p v-if="site.email">
-                           3. Använd GDPR-mallen nedan för best resultat
+                          3. Använd GDPR-mallen nedan för best resultat
                         </p>
-
-                        <p
-                          v-if="
-                            !site.email && site.method.includes('webbformulär')
-                          "
-                        >
-                           Denna sajt har ett kontaktformulär. Besök webbplatsen
-                          först för att se om processen har ändrats.
+                        <p v-if="!site.email && site.method.includes('webbformulär')">
+                          Denna sajt har ett kontaktformulär. Besök webbplatsen först för att se om processen har ändrats.
                         </p>
-
-                        <p
-                          v-if="
-                            !site.email && !site.method.includes('webbformulär')
-                          "
-                        >
-                           Besök webbplatsen för att se deras aktuella process
-                          för borttagning av personuppgifter.
+                        <p v-if="!site.email && !site.method.includes('webbformulär')">
+                          Besök webbplatsen för att se deras aktuella process för borttagning av personuppgifter.
                         </p>
-
                       </div>
-
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
 
             </div>

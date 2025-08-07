@@ -72,53 +72,27 @@
             > Köp en kaffe ☕ </Button
           > <slot name="dark-mode-toggle" />
         </div>
-         <!-- Share Link -->
-        <div class="border-t border-gray-700 pt-4 mb-6">
-
-          <div class="text-center">
-
-            <p class="text-xs text-gray-500 mb-3">
-               Om denna sida hjälpte dig, dela den gärna med andra som också
-              behöver ta bort sina uppgifter
-            </p>
-             <Button
-              variant="ghost"
-              size="sm"
-              @click="copyLink"
-              class="text-gray-400 hover:text-gray-300 text-xs"
-              > Kopiera länk </Button
-            >
-          </div>
-
-        </div>
-         <!-- Legal Information -->
+         <!-- Simple Footer -->
         <div class="border-t border-gray-700 pt-6 mt-6">
-
-          <div class="text-center space-y-3">
-
-            <p class="text-xs text-gray-500">
-               © 2025 Ge Fan i Mig - Bara en person med en dator som hjälper
-              andra svenskar
-            </p>
-
-            <div class="text-xs text-gray-500 space-y-1">
-
-              <p>
-                <strong>Använd på egen risk:</strong> Detta är inte juridisk
-                rådgivning och jag ger inga garantier
-              </p>
-
-              <p>
-                Betala aldrig för detta - all info som betalföretagen har finns
-                här gratis
-              </p>
-
-              <p>Inspirerat av en användbar Reddit-post</p>
-
+          <div class="text-center space-y-4">
+            <!-- Share Link -->
+            <div>
+              <Button
+                variant="ghost"
+                size="sm"
+                @click="copyLink"
+                class="text-gray-400 hover:text-gray-300 text-sm"
+              >
+                <Icon name="heroicons:link" class="h-4 w-4 mr-2" />
+                Dela denna sida
+              </Button>
             </div>
-
+            
+            <!-- Copyright -->
+            <p class="text-xs text-gray-500">
+              © 2025 Ge Fan i Mig • Använd på egen risk • 100% gratis
+            </p>
           </div>
-
         </div>
 
       </div>
