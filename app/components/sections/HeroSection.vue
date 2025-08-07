@@ -43,9 +43,10 @@
             <p class="font-semibold mb-1">100% gratis - inga dolda kostnader</p>
 
             <p>
-              Till skillnad från andra sajter som tar betalt för denna tjänst är
-              vår guide helt gratis. Vi hjälper dig utan att tjäna pengar på din
-              integritet.
+               Till skillnad från andra sajter som tar betalt för denna tjänst
+              är vår guide helt gratis. Vi hjälper dig utan att tjäna pengar på
+              din integritet. De andra hemsidorna tar betalt för att göra dessa
+              små steg åt dig, jag anser att det är bluff och skrämsel.
             </p>
 
           </div>
@@ -64,7 +65,7 @@
           @click="scrollToTemplate"
           variant="secondary"
           icon="heroicons:document-text"
-          > Se GDPR-mall </Button
+          > gå till GDPR-mall </Button
         >
       </div>
 
@@ -93,3 +94,4 @@ const scrollToTemplate = () => {
   }
 }
 </script>
+
