@@ -52,6 +52,23 @@
           <slot name="dark-mode-toggle" />
         </div>
         
+        <!-- Share Link -->
+        <div class="border-t border-gray-700 pt-4 mb-6">
+          <div class="text-center">
+            <p class="text-xs text-gray-500 mb-3">
+              Om denna sida hjälpte dig, dela den gärna med andra som också behöver ta bort sina uppgifter
+            </p>
+            <Button
+              variant="ghost"
+              size="sm"
+              @click="copyLink"
+              class="text-gray-400 hover:text-gray-300 text-xs"
+            >
+              Kopiera länk
+            </Button>
+          </div>
+        </div>
+        
         <!-- Legal Information -->
         <div class="border-t border-gray-700 pt-6 mt-6">
           <div class="text-center space-y-3">
@@ -72,4 +89,13 @@
 
 <script setup lang="ts">
 // Footer component - clean and modular
+
+const copyLink = async () => {
+  try {
+    await navigator.clipboard.writeText('https://gefanimig.se')
+    // You could add a toast notification here
+  } catch (err) {
+    console.error('Failed to copy link:', err)
+  }
+}
 </script> 

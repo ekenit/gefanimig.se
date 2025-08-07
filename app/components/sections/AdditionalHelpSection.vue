@@ -99,18 +99,26 @@
                     to="https://www.adressandring.se/vara-tjanster/adresslaset"
                     variant="success"
                     external
-                    icon="heroicons:shield-check"
+                    icon="heroicons:arrow-top-right-on-square"
                   >
-                    Aktivera adresslåset
+                    Adresslåset
                   </Button>
                   <Button
                     tag="NuxtLink"
-                    to="https://skatteverket.se/privat/folkbokforing/flyttanmalan/sparraobehorigadressandring.4.361dc8c15312eff6fd2ca7c.html"
+                    to="https://www.skatteverket.se/privat/folkbokforing/andringar/andring-av-folkbokforingsadress.html"
                     variant="success"
                     external
-                    icon="heroicons:building-office"
+                    icon="heroicons:arrow-top-right-on-square"
                   >
                     Skatteverket-spärr
+                  </Button>
+                  <Button
+                    tag="NuxtLink"
+                    to="/security"
+                    variant="secondary"
+                    icon="heroicons:shield-check"
+                  >
+                    Fler säkerhetsverktyg
                   </Button>
                 </div>
               </div>

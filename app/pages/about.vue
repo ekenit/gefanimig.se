@@ -2,6 +2,9 @@
   <div class="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-900 dark:to-purple-950">
     <div class="py-16 px-4 mx-auto max-w-7xl">
       <div class="max-w-4xl mx-auto">
+        <!-- Breadcrumb -->
+        <Breadcrumb current-page="Om oss" />
+        
         <h1 class="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-800 dark:from-purple-400 dark:via-pink-400 dark:to-purple-600 bg-clip-text text-transparent">
           Om Ge Fan i Mig
         </h1>

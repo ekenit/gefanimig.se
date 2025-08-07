@@ -2,6 +2,9 @@
   <div class="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-900 dark:to-red-950">
     <div class="py-16 px-4 mx-auto max-w-7xl">
       <div class="max-w-4xl mx-auto">
+        <!-- Breadcrumb -->
+        <Breadcrumb current-page="Säkerhetsresurser" />
+        
         <!-- Header -->
         <div class="text-center mb-12">
           <h1 class="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-red-600 via-orange-600 to-red-800 dark:from-red-400 dark:via-orange-400 dark:to-red-600 bg-clip-text text-transparent">
@@ -852,6 +855,47 @@ useHead({
             }
           ]
         }
+      })
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'Vilka gratis verktyg finns för att kolla dataläckor?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Have I Been Pwned och Firefox Monitor är de bästa gratis verktygen för att kolla om din e-post finns i dataläckor. De använder samma databas och är helt gratis.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Vilken lösenordshanterare rekommenderas?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Bitwarden är den bästa gratis lösenordshanteraren. Den är open source, fungerar på alla enheter och har alla funktioner du behöver utan kostnad.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Är VPN nödvändigt för säkerhet?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'VPN är bra för osäkra WiFi-nätverk och geo-blockerat innehåll, men det ger inte anonymitet om du loggar in på konton. Det är inte magisk anonymitet.'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'Vilka blufftjänster ska jag undvika?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Undvik tjänster som tar betalt för "identitetsskydd", "dark web monitoring", "kreditbevakning" eller "VPN-säkerhet" - allt detta finns gratis och ofta bättre.'
+            }
+          }
+        ]
       })
     }
   ]
