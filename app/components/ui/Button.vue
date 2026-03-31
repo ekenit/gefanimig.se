@@ -1,5 +1,5 @@
 <template>
-   <component
+  <component
     :is="computedTag"
     :to="computedTo"
     :href="computedHref"
@@ -9,16 +9,11 @@
     :class="buttonClasses"
     :disabled="disabled"
     @click="handleClick"
-    > <Icon
-      v-if="icon && iconPosition === 'left'"
-      :name="icon"
-      :class="iconClasses"
-    /> <span v-if="$slots.default"><slot /></span> <Icon
-      v-if="icon && iconPosition === 'right'"
-      :name="icon"
-      :class="iconClasses"
-    /> </component
   >
+    <Icon v-if="icon && iconPosition === 'left'" :name="icon" :class="iconClasses" />
+    <span v-if="$slots.default"><slot /></span>
+    <Icon v-if="icon && iconPosition === 'right'" :name="icon" :class="iconClasses" />
+  </component>
 </template>
 
 <script setup lang="ts">
@@ -55,70 +50,45 @@ const handleClick = (event: Event) => {
   }
 }
 
-// Computed properties for proper external link handling
 const computedTag = computed(() => {
-  if (props.external && (props.to || props.href)) {
-    return 'a'
-  }
+  if (props.external && (props.to || props.href)) return 'a'
   return props.tag
 })
 
 const computedTo = computed(() => {
-  if (props.external) {
-    return undefined
-  }
+  if (props.external) return undefined
   return props.to
 })
 
 const computedHref = computed(() => {
-  if (props.external) {
-    return props.to || props.href
-  }
+  if (props.external) return props.to || props.href
   return props.href
 })
 
 const buttonClasses = computed(() => {
-  const baseClasses =
-    'inline-flex items-center justify-center font-medium rounded-xl border border-transparent transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-[1.02] active:scale-[0.98]'
+  const base = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-950 disabled:opacity-50 disabled:cursor-not-allowed'
 
-  const sizeClasses = {
-    sm: 'px-3 py-2 text-sm',
-    md: 'px-4 py-2 text-sm',
-    lg: 'px-6 py-3 text-base',
+  const sizes: Record<string, string> = {
+    sm: 'px-2.5 py-1.5 text-xs',
+    md: 'px-3.5 py-2 text-sm',
+    lg: 'px-5 py-2.5 text-sm',
   }
 
-  const variantClasses = {
-    primary:
-      'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl focus:ring-blue-500 dark:focus:ring-blue-400',
-    secondary:
-      'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 shadow-sm hover:shadow-md focus:ring-gray-500 dark:focus:ring-gray-400',
-    danger:
-      'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg hover:shadow-xl focus:ring-red-500 dark:focus:ring-red-400',
-    success:
-      'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white shadow-lg hover:shadow-xl focus:ring-green-500 dark:focus:ring-green-400',
-    warning:
-      'bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white shadow-lg hover:shadow-xl focus:ring-orange-500 dark:focus:ring-orange-400',
-    ghost:
-      'bg-transparent text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-gray-500 dark:focus:ring-gray-400',
+  const variants: Record<string, string> = {
+    primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
+    secondary: 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 focus:ring-gray-400',
+    danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500',
+    success: 'bg-green-600 text-white hover:bg-green-700 focus:ring-green-500',
+    warning: 'bg-amber-600 text-white hover:bg-amber-700 focus:ring-amber-500',
+    ghost: 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-400',
   }
 
-  return `${baseClasses} ${sizeClasses[props.size]} ${variantClasses[props.variant]}`
+  return `${base} ${sizes[props.size]} ${variants[props.variant]}`
 })
 
 const iconClasses = computed(() => {
-  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-4 w-4',
-    lg: 'h-5 w-5',
-  }
-
-  const spacingClasses = {
-    sm: props.iconPosition === 'left' ? 'mr-2' : 'ml-2',
-    md: props.iconPosition === 'left' ? 'mr-2' : 'ml-2',
-    lg: props.iconPosition === 'left' ? 'mr-3' : 'ml-3',
-  }
-
-  return `${sizeClasses[props.size]} ${spacingClasses[props.size]}`
+  const size = props.size === 'lg' ? 'h-4 w-4' : 'h-3.5 w-3.5'
+  const spacing = props.iconPosition === 'left' ? 'mr-1.5' : 'ml-1.5'
+  return `${size} ${spacing}`
 })
 </script>
-
